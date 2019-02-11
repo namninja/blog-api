@@ -4,6 +4,8 @@
   "description": "Thinkful Challenge Blog API",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
+    "started": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +23,7 @@
   },
   "homepage": "https://github.com/namninja/blog-api#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "uuid": "^3.3.2"
   }
 }
