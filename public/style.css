@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  button, input[type="text"] {
+    padding: 5px;
+  }
+  
+  button:hover {
+    cursor: pointer;
+  }
+section {
+    width: 800px;
+}
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+ .blog-data {
+     padding: 10px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ #blog-content {
+     
+     height: 300px;
+ }
+
+ #js-blog-form {
+    display: flex;
+    justify-content: center;
+    align-items: inherit;
+    flex-direction: column;
+ }
+ label {
+     flex: 1 0 auto;
+ }
+ input {
+     flex: 2 0 auto;
+ }
+ .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+ h2 {
+     text-align: center;
+ }

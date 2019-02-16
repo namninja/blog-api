@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Blogs-r-us</title>
+    <meta name="description" content="Blogging">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Blogs-R-Us</h1>
+        </header>
+        <main>
+            <section>
+                <h2>Blog Entry</h2>
+                <form id="js-blog-form">
+                    <div class='blog-data'>
+                        <label for="blog-title">Title</label>
+                        <input type="text" name="blog-title" id="blog-title" placeholder="e.g., smoothie">
+                    </div>
+                    <div class='blog-data'>
+                        <label for="blog-content">Content</label>
+                        <input type="text" name="blog-content" id="blog-content" ,
+                            placeholder="Once upon a midnight dreary">
+                    </div>
+                    <div class='blog-data'>
+                        <label for="blog-author">Author</label>
+                        <input type="text" name="blog-author" id="blog-author" ,
+                            placeholder="Poe">
+                    </div>
+                    <div class='blog-data'>
+                        <label for="blog-date">Publish Date</label>
+                        <input type="text" name="blog-date" id="blog-date" ,
+                            placeholder="02/14/2019">
+                    </div>
+                    <button type="submit">Add Entry</button>
+                </form>
+
+                <ul class="blogs js-blogs">
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+</body>
+
+</html>
