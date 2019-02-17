@@ -43,7 +43,7 @@ function addBlog(blog) {
     $.ajax({
         method: "POST",
         url: BLOGS_URL,
-        data: JSON.stringify(recipe),
+        data: JSON.stringify(blog),
         success: function (data) {
             getAndDisplayBlog();
         },
@@ -102,7 +102,7 @@ function handleBlogAdd() {
 
 
 function handleBlogDelete() {
-    $(".js-blog").on("click", ".js-blog-delete", function (e) {
+    $(".js-blog").on("click", ".js-blog-delete", function(e) {
         e.preventDefault();
         deleteBlog(
             $(e.currentTarget)
@@ -113,7 +113,7 @@ function handleBlogDelete() {
 }
 
 
-$(function () {
+$(function() {
     getAndDisplayBlog();
     handleBlogAdd();
     handleBlogDelete();
