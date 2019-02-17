@@ -15,7 +15,7 @@ var blogTemplate =
     "</div>" +
     "</div>";
 
-var serverBase = "//evening-mesa-72855.herokuapp.com";
+var serverBase = "//evening-mesa-72855.herokuapp.com/";
 var BLOGS_URL = serverBase + "blog-posts";
 
 

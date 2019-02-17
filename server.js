@@ -1,15 +1,15 @@
-const express = require('express');
-const morgan = require('morgan');
+const express = require("express");
+const morgan = require("morgan");
 
 const app = express();
 app.use(express.json());
 
-const blogPostRouter = require('./blogPostRouter');
+const blogPostRouter = require("./blogPostRouter");
 
 // Log the http Layer
-app.use(morgan('common'));
+app.use(morgan("common"));
 
-app.use(express.static('public'));
+app.use(express.static("public"));
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
