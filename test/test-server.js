@@ -74,6 +74,16 @@ describe("Blog List", function() {
             expect(res.body.author).to.deep.equal(newItem.author) 
          });
     });
+    it("should error if POST missing expected values", function() {
+        const badRequestData = {};
+        return chai
+          .request(app)
+          .post("/blog-posts")
+          .send(badRequestData)
+          .then(function(res) {
+            expect(res).to.have.status(400);
+          });
+      });
     // test strategy
     // 1. intialize some update data (we won't have an id yet)
     // 2. make a GET request so we can get an item to update
