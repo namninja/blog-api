@@ -7,7 +7,7 @@ const jsonParser = bodyParser.json();
 const {BlogPosts} = require('./model')
 
 BlogPosts.create('My first post', 'Hello World!', 'Nam Ninja', '2/10/2019')
-
+BlogPosts.create('Ode to space', 'Space is so vast. There is so much of it.', 'Nam Ninja', '2/11/2019')
 // when the root of this router is called with GET, return
 // all current ShoppingList items
 router.get('/', (req, res) => {
@@ -29,7 +29,7 @@ router.post('/', jsonParser, (req, res) => {
         return res.status(400).send(message);
       }
     }
-    const item = BlogPosts.create(req.body.title, req.body.author, req.body.content, req.body.date);
+    const item = BlogPosts.create(req.body.title, req.body.content, req.body.author, req.body.date);
     res.status(201).json(item);
   });
 
@@ -72,7 +72,7 @@ router.put('/:id', jsonParser, (req, res) => {
       publishDate: req.body.publishDate,
       id: req.params.id
     });
-    res.status(204).end();
+    res.status(200).json(updatedItem);
   })
 
 // export router
