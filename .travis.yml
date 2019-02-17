@@ -1,2 +1,9 @@
 language: node_js
 node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: MFZFBTFMolULZFsz4pDtmKTunNBfqqYyqZvvQFqYDzgRlbyhiqezopfh1NPZxL5W1cZUQ9AZZevBMx62QPIN+I9YC91f+Wqp8ttYUOH0K2lOK3+OvobGUToq+/cMtiRb2KU6UR/dhOgKaXlb/vW9pvyWyZuq+ZeQ/ZlVUEyjkMmD66cmVzERSEe+QWJijS+cUYOjyd8s7gwV7ZBCpRUZYA07BOqZ3Weq866CQ3A8MXqtVXKra5K5Qkw7HRTjb/99lPFJLvBqQQm/ZWp97/ntF64cdFHL6Tq+tF6fTVOlO6/4MrJq3FVL08ntdonucPj9RkRtUd44p09qXo/jUowBkhrCfnLKflu4uviOw7eyw59LMWmC/+mUHfhJsVKLcaT5N7Afb6wF5uOlQTAOW++EyekOR0fukjV7ofTGPhoVrGWidAgU/5HLlZE+3twzEOQG0MuT4LBw3X8Lh61sIIEZvBehU9H35TXXQpJVlDDxyf6qm1SIzUIy/LNDCOyUHpv0rJ0Um0Jyu4ZZN+4h4x9/iZ/wfoNf6QqzjZOOBvqxmg+DTrbPCc+XGTj240mFbyYHDx+mYwvmpVG21atMArYMSUsF3ULhPRES6A5uDiKcuP0xr6gO+BJlys81L5GbCye1h2N+i5PyhQ7UppxzjjuRQnaD2wTBC0U+boKFzvzWvZs=
+  app: evening-mesa-72855
+  on:
+    repo: namninja/blog-api
