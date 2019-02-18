@@ -15,14 +15,36 @@ function StorageException(message) {
    this.name = "StorageException";
 }
 
+function formatDate(submitDate) {
+  let newDate = new Date(submitDate)
+  let date = newDate.getDate();
+  let month = newDate.getMonth(); //Be careful! January is 0 not 1
+  let year = newDate.getFullYear();
+  let dateString = date + "/" +(month + 1) + "/" + year;
+  return dateString
+}
+
 const BlogPosts = {
   create: function(title, content, author, publishDate) {
+    console.log(publishDate)
+    let date;
+    if (publishDate === undefined) {
+      var currentDate = new Date();
+        var day = currentDate.getDate();
+        var month = currentDate.getMonth(); 
+        var year = currentDate.getFullYear();
+        var monthDateYear  = (month+1) + "/" + day + "/" + year;
+        date = monthDateYear
+    }
+    else {
+      date = publishDate
+    }
     const post = {
       id: uuid.v4(),
       title: title,
       content: content,
       author: author,
-      publishDate: publishDate || Date.now()
+      publishDate: date
     };
     this.posts.push(post);
     return post;

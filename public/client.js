@@ -15,7 +15,8 @@ var blogTemplate =
     "</div>" +
     "</div>";
 
-var serverBase = "//evening-mesa-72855.herokuapp.com/";
+// var serverBase = "//evening-mesa-72855.herokuapp.com/";
+var serverBase = "//localhost:8080/";
 var BLOGS_URL = serverBase + "blog-posts";
 
 
@@ -40,11 +41,13 @@ function getAndDisplayBlog() {
 
 function addBlog(blog) {
     console.log("Adding blog: " + blog);
+    console.log(blog);
     $.ajax({
         method: "POST",
         url: BLOGS_URL,
         data: JSON.stringify(blog),
         success: function (data) {
+            console.log(data, '-------------------------')
             getAndDisplayBlog();
         },
         dataType: "json",
@@ -83,16 +86,16 @@ function handleBlogAdd() {
     $("#js-blog-form").submit(function (e) {
         e.preventDefault();
         addBlog({
-            name: $(e.currentTarget)
+            title: $(e.currentTarget)
                 .find("#blog-title")
                 .val(),
-            name: $(e.currentTarget)
+            content: $(e.currentTarget)
                 .find("#blog-content")
                 .val(),
-            name: $(e.currentTarget)
+            author: $(e.currentTarget)
                 .find("#blog-author")
                 .val(),
-            name: $(e.currentTarget)
+            publishDate: $(e.currentTarget)
                 .find("#blog-date")
                 .val(),
         });
