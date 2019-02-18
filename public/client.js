@@ -15,7 +15,7 @@ var blogTemplate =
     "</div>" +
     "</div>";
 
-var serverBase = "mighty-fortress-33902.herokuapp.com//";
+var serverBase = "//mighty-fortress-33902.herokuapp.com/";
 //var serverBase = "//localhost:8080/";
 var BLOGS_URL = serverBase + "blog-posts";
 
